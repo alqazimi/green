@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>GreenRoot</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <h1 id="site-title">GreenRoot</h1>
+  <p id="site-subtitle">Buy & Sell All Types of Vegetation in Somalia</p>
+  <div id="lang-switcher">
+    <button class="lang-btn" data-lang="en">English</button>
+    <button class="lang-btn" data-lang="so">Somali</button>
+    <button class="lang-btn" data-lang="ar">Arabic</button>
+    <button class="lang-btn" data-lang="fr">French</button>
+  </div>
+</header>
+
+<section id="search-section">
+  <input type="text" id="search-input" placeholder="Search products..." />
+</section>
+
+<section id="product-section">
+  <h2 id="products-title">🌟 Our Products</h2>
+  <div id="product-list"></div>
+</section>
+
+<aside id="cart-sidebar" class="hidden">
+  <h3 id="cart-title">Your Cart</h3>
+  <div id="cart-items"></div>
+  <div id="cart-total-container">
+    <strong>Total:</strong> <span id="cart-total">0</span> SOS
+  </div>
+  <button id="checkout-btn">Checkout</button>
+  <button id="close-cart">Close</button>
+</aside>
+
+<button id="cart-toggle">🛒 Cart (<span id="cart-count">0</span>)</button>
+
+<div id="checkout-modal" class="hidden">
+  <h3>Checkout</h3>
+  <button id="pay-evc">Pay with EVC</button>
+  <button id="pay-cash">Pay on Delivery</button>
+  <div id="evc-form" class="hidden">
+    <input type="text" id="evc-number" placeholder="Enter EVC number" />
+    <button id="confirm-evc">Confirm Payment</button>
+  </div>
+  <div id="confirmation-message" class="hidden"></div>
+  <div id="evc-simulation" class="hidden">
+    <h4>SMS Simulation:</h4>
+    <div id="sms-messages"></div>
+    <button id="simulate-sms-btn">Simulate SMS</button>
+  </div>
+  <button id="cancel-checkout">Cancel</button>
+</div>
+
+<section class="shop-section">
+  <h2 id="shop-title">Are you a Shop or Farmer?</h2>
+  <p id="shop-desc">✅ Bulk Orders   ✅ Sell Products   ✅ Get Supply</p>
+  <button id="call-shop-btn">Call Shop</button>
+  <button id="call-farmer-btn">Call Farmer</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
